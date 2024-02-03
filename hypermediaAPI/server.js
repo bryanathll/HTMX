@@ -15,7 +15,8 @@ app.get('/', (req, res) =>{
 })
 
 app.post("/message", async (req, res)=>{
-    res.send(`<div><h3>Hello World</h3><div>`);
+
+    res.send(`<div><h3>Hello Motherfucker</h3><div>`);
 })
 
 const PORT = process.env.PORT || 1330;
