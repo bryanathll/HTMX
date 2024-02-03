@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/", (req, res) =>{
+app.get('/', (req, res) =>{
     res.send('<h2> Welcome to the Node Hypermedia API </h2>');
 })
 
