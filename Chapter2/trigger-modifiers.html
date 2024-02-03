@@ -11,9 +11,18 @@
 </head>
 
 <body>
-    <div hx-post="http://localhost:1330/message" hx-trigger="mouseenter once">
+    <!-- <div hx-post="http://localhost:1330/message" hx-trigger="mouseenter once">
         Make post request
+    </div> -->
+
+    <div hx-post="http://localhost:1330/message" hx-trigger="click from:#requestTrigger">
+        Make a delayed Request
     </div>
+
+
+    <button type="button" id="requestTrigger">
+        Trigger the Post
+    </button>
 </body>
 
 </html>
