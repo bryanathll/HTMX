@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+    <title>Making HTTP request</title>
+</head>
+
+<body>
+
+
+    <!-- loading content  menjadi child div yang berada di dalam element div -->
+    <!-- <div hx-post="http://localhost:1330/message" hx-trigger="click" hx-swap="afterend">
+
+        <button>
+            Click me and see the indicator
+        </button>
+    
+            <p class="htmx-indicator">
+                Loading content....
+            </p>
+    </div> -->
+
+
+    <!-- loading indicator berada di luat element button dan tidak menjadi child button dengan menggunakan hx-indicator -->
+    <button hx-post="http://localhost:1330/message" hx-trigger="click" hx-swap="afterend" hx-indicator="#indicator">
+        Click me and see the indicator
+    </button>
+
+    <p class="htmx-indicator" id="indicator">
+        Loading content....
+    </p>
+
+
+</body>
+
+</html>
