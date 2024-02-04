@@ -8,12 +8,22 @@
         integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
         crossorigin="anonymous"></script>
     <title>request triggers </title>
+    <style>
+        #scrollme {
+            margin-top: 50em;
+        }
+    </style>
 </head>
 
 <body>
-    <div hx-get="http://localhost:1330/" hx-target="#response" hx-trigger="load delay:3s">
+    <!-- <div hx-get="http://localhost:1330/" hx-target="#response" hx-trigger="load delay:3s">
         Fire as the page loads
+    </div> -->
+
+    <div hx-get="http://localhost:1330/" hx-target="#response" hx-trigger="revealed" id="scrollme">
+        Fire when I am revealed
     </div>
+
 
     <div id="response"></div>
 
