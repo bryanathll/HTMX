@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+    <title>Making HTTP request</title>
+</head>
+
+<body>
+
+    <button type="button" hx-get="http://localhost:1330/"
+        hx-trigger="click[1==1]"><!--  [1==1] condition in the event  -->
+        Make GET request
+    </button>
+
+
+</body>
+
+</html>
