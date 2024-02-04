@@ -31,11 +31,18 @@
 
 
     <!-- using json -->
-    <button hx-post="http://localhost:1330/echopayload" hx-target="#response"
+    <!-- <button hx-post="http://localhost:1330/echopayload" hx-target="#response"
         hx-vals='js:{"email": "ytrewq@email.com", "pass": getPassword()}'>
         Submit
+    </button> -->
+
+    <button hx-post="http://localhost:1330/echopayload" hx-target="#response" hx-include="#emailResponse">
+        submit
     </button>
+
     <div id="response"></div>
+
+    <input type="email" name="email" id="emailResponse">
 
 </body>
 
