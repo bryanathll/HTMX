@@ -11,6 +11,10 @@
     <style>
         #scrollme {
             margin-top: 50em;
+            height: 20em;
+            width: 20em;
+            color: #202020;
+            background-color: #E0BBE4;
         }
     </style>
 </head>
@@ -20,7 +24,8 @@
         Fire as the page loads
     </div> -->
 
-    <div hx-get="http://localhost:1330/" hx-target="#response" hx-trigger="revealed" id="scrollme">
+    <div hx-get="http://localhost:1330/" hx-target="#response" hx-trigger="intersect threshold:0.1 delay:1s"
+        id="scrollme">
         Fire when I am revealed
     </div>
 
