@@ -17,12 +17,20 @@ app.get('/', (req, res) =>{
 app.post("/message", async (req, res)=>{
 
     // use setTimeout for loading indicator
-    setTimeout(() =>{
-        res.send(`<div><h3>Hello Motherfucker</h3><div>`);
-  },5000);
-})
-    // res.send(`<div><h3>Hello Motherfucker</h3><div>`);
+//     setTimeout(() =>{
+//         res.send(`<div><h3>Hello Motherfucker</h3><div>`);
+//   },5000);
 // })
+    res.send(`<div><h3>Hello World!</h3><div>`);
+})
+
+app.post('/echopayload', async(req,res)=>{
+
+    const email = req.body.email;
+    const pass = req.body.pass;
+
+    res.send(`<div> <b>Email:</b>${email}</div>, <b>Password:</b>${pass}`);
+});
 
 const PORT = process.env.PORT || 1330;
 
