@@ -9,6 +9,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req, res) =>{
     res.send('<h2> Welcome to the Node Hypermedia API </h2>');
@@ -29,7 +30,7 @@ app.post('/echopayload', async(req,res)=>{
     const email = req.body.email;
     const pass = req.body.pass;
 
-    res.send(`<div> <b>Email:</b>${email}</div>, <b>Password:</b>${pass}`);
+    res.send(`<div> <b>Email:</b>${email}</div><b>Password:</b>${pass}`);
 });
 
 const PORT = process.env.PORT || 1330;
