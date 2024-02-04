@@ -8,21 +8,33 @@
         integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
         crossorigin="anonymous"></script>
     <title>request triggers </title>
+    <script>
+        function getPassword() {
+            return 'qwerty1234'
+        }
+    </script>
+
 </head>
 
 <body>
 
-    <form>
-
+    <!-- using form -->
+    <!-- <form>
         <input type="email" name="email" placeholder="Enter Email" />
         <br>
-        <input type="text" name="pas" placeholder="Enter Password" />
+        <input type="password" name="pass" placeholder="Enter Password" />
 
-        <button hx-post="https://localhost:1330/echopayload" hx-target="#response">
+        <button hx-post="http://localhost:1330/echopayload" hx-target="#response">
             Submit
         </button>
-    </form>
+    </form> -->
 
+
+    <!-- using json -->
+    <button hx-post="http://localhost:1330/echopayload" hx-target="#response"
+        hx-vals='js:{"email": "ytrewq@email.com", "pass": getPassword()}'>
+        Submit
+    </button>
     <div id="response"></div>
 
 </body>
