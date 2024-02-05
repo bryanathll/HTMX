@@ -33,6 +33,12 @@ app.post('/echopayload', async(req,res)=>{
     res.send(`<div> <b>Email:</b>${email}</div><b>Password:</b>${pass}`);
 });
 
+app.post('/upload', upload.single("file"), async (req, res) =>{
+    const filepath =req.file.path;
+    console.log(filepath);
+    res.send(`<b>Upload Successful</b>: ${filepath}`)
+})
+
 const PORT = process.env.PORT || 1330;
 
 app.listen (PORT, () =>{
