@@ -13,9 +13,9 @@
 <body>
 
     <form>
-        <input type="file" name="file" id="UploadFile">
-        <button hx-post="http://localhost:1330/message" hx-confirm="Are you sure you want to disfigure this button?">
-            Load content
+        <input type="file" name="file">
+        <button hx-post="http://localhost:1330/upload" hx-encoding="multipart/form-data">
+            Upload file
         </button>
     </form>
 
