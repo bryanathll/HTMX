@@ -25,7 +25,12 @@ const storage = multer.diskStorage({
 const upload = multer({storage : storage});
 
 app.get('/', (req, res) =>{
-    res.send('<h2> Welcome to the Node Hypermedia API </h2>');
+
+    setTimeout(()=>{
+        res.send('<h2> Welcome to the Node Hypermedia API </h2>')
+    }, 5000);
+
+    // res.send('<h2> Welcome to the Node Hypermedia API </h2>');
 })
 
 app.post("/message", async (req, res)=>{
