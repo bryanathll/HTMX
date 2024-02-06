@@ -4,10 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
     <title>Syncing request</title>
 </head>
 
 <body>
+
+    <button id="firstRequest" hx-get="http://localhost:1330/" hx-target="#target1, #target2">
+        First Request
+    </button>
+
+    <button id="secondRequest" hx-post="http://localhost:1330/message" hx-target="#target2"
+        hx-sync="#firstRequest:queue all">
+        Second Request
+    </button>
+
+    <div id="target1">
+        Target one
+    </div>
+
+    <div id="target2">
+        Target two
+    </div>
 
 </body>
 
