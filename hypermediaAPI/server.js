@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const multer = require('multer')
+const path = require("path")
 
 dotenv.config();
 
@@ -48,7 +49,7 @@ app.post('/echopayload', async(req,res)=>{
 app.post("/upload", upload.single("file"), async (req, res) => {
     const filepath = req.file.path;
     console.log(filepath);
-    res.send(`<b>Upload Successful</b>: ${filepath}`)
+    res.send(`<b>Upload Successful</b>: ${filepath}`);
 })
 
 const PORT = process.env.PORT || 1330;
