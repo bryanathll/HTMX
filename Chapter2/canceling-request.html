@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>candeling request</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <button type="button" id="reqButton" hx-get="http://localhost:1330/" hx-target="#request">
+        Send request
+    </button>
+
+    <button type="button" id="cancelReqBtn" onclick="htmx.trigger('#reqButton', 'htmx:abort')">
+        canceling request
+    </button>
+
+    <div id="request"></div>
+
+</body>
+
+</html>
