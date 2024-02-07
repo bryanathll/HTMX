@@ -33,10 +33,6 @@ app.get('/', (req, res) =>{
     // res.send('<h2> Welcome to the Node Hypermedia API </h2>');
 })
 
-app.post('/destination',(req, res) =>{
-    res.send('Hello #destination here')
-})
-
 app.post("/message", async (req, res)=>{
 
     // use setTimeout for loading indicator
@@ -59,6 +55,17 @@ app.post("/upload", upload.single("file"), async (req, res) => {
     const filepath = req.file.path;
     console.log(filepath);
     res.send(`<b>Upload Successful</b>: ${filepath}`);
+})
+
+app.post('/destination',(req, res) =>{
+    res.send('Hello #destination here')
+})
+
+app.post('/oob',(req, res) =>{
+    res.send(`<div> 
+            <p id="target2" hx-swap-oob="true">Out of Bounds Swaps</p> 
+            Main Target here <br>
+            </div>`)
 })
 
 const PORT = process.env.PORT || 1330;
