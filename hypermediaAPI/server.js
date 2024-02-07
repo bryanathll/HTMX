@@ -67,7 +67,7 @@ app.post('/oob',(req, res) =>{
     //     Main Target here <br>
     //     </div>`)
 
-    res.send(`<div> <p id="target2"> Selecting response here </p> </div>`)
+    res.send(`<div> <p id="target2">Selecting response here</p> </div>`)
 
             
 })
