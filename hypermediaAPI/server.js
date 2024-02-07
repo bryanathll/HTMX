@@ -33,6 +33,10 @@ app.get('/', (req, res) =>{
     // res.send('<h2> Welcome to the Node Hypermedia API </h2>');
 })
 
+app.post('/destination',(req, res) =>{
+    res.send('Hello #destination here')
+})
+
 app.post("/message", async (req, res)=>{
 
     // use setTimeout for loading indicator
