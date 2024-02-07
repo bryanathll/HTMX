@@ -62,10 +62,14 @@ app.post('/destination',(req, res) =>{
 })
 
 app.post('/oob',(req, res) =>{
-    res.send(`<div> 
-            <p id="target2" hx-swap-oob="true">Out of Bounds Swaps</p> 
-            Main Target here <br>
-            </div>`)
+    // res.send(`<div> 
+    //     <p id="target2" hx-swap-oob="true">Out of Bounds Swaps</p> 
+    //     Main Target here <br>
+    //     </div>`)
+
+    res.send(`<div> <p id="target2"> Selecting response here </p> </div>`)
+
+            
 })
 
 const PORT = process.env.PORT || 1330;
