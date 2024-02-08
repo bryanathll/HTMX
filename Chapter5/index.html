@@ -13,7 +13,7 @@
 <body>
 
     <div hx-ws="connect:ws://localhost:5000">
-        <form>
+        <form hx-ws="send">
             <input type="text" name="chat_message">
             <br>
             <button type="submit">
