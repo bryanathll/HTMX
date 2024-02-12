@@ -72,6 +72,11 @@ app.post('/oob',(req, res) =>{
             
 })
 
+app.get('/bigbox', (req, res)=>{
+    res.send(`<div id="growing-box" class="grow" style="height: 300px; width:300px; background-color: red;" 
+    hx-get="http://localhost:1330/bigbox" hx-swap="outerHTML"> Big box</div>`)
+})
+
 const PORT = process.env.PORT || 1330;
 
 app.listen (PORT, () =>{
