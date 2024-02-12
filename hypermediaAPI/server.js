@@ -77,6 +77,29 @@ app.get('/bigbox', (req, res)=>{
     hx-get="http://localhost:1330/bigbox" hx-swap="outerHTML"> Big box</div>`)
 })
 
+app.get("/users", (req, res) => {
+
+    res.json([
+        {
+            id: 1,
+            name: "Steph Curry"
+        },
+        {
+            id: 2,
+            name: "Lebron James"
+        },
+        {
+            id: 3,
+            name: "Kevin Durant"
+        },
+        {
+            id: 4,
+            name: "Giannis Antetokounmpo"
+        }
+    ])
+});
+
+    
 const PORT = process.env.PORT || 1330;
 
 app.listen (PORT, () =>{
